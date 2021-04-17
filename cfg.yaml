@@ -1,0 +1,17 @@
+input:
+  series: input/hourly.csv
+  classes: input/classes.csv
+  splits: input/splits.csv
+output:
+  model: 'output/model.pkl'
+class_index:
+  tenant: 0
+  laundry: 1
+  lighting: 2
+  pool: 3
+options:
+  sample: True
+column_names:
+  instance_column_name: id
+  time_column_name: hour
+  value_column_name: use
