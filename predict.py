@@ -23,7 +23,7 @@ series_dat = ami.load_data()
 filehandler = open('output/' + cfg['output']['model'], 'rb')
 model_bundle = pickle.load(filehandler)
 
-print('Predict:')
+print('Predicting:')
 predictions = ami.predict(series_dat, model_bundle['classifier'], model_bundle['kernels'])
 
 print('Exporting:')
