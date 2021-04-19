@@ -1,9 +1,10 @@
 input:
-  series: input/hourly.csv
-  classes: input/classes.csv
-  splits: input/splits.csv
+  series: hourly.csv
+  classes: classes.csv
+  splits: splits.csv
 output:
-  model: 'output/model.pkl'
+  model: 'model_bundle.pkl'
+  predictions: 'predictions.csv'
 class_index:
   tenant: 0
   laundry: 1
@@ -11,7 +12,7 @@ class_index:
   pool: 3
 options:
   sample: True
-column_names:
-  instance_column_name: id
-  time_column_name: hour
-  value_column_name: use
+  s3:
+    use_s3: True
+    import: lightgbm-input
+    export: lightgbm-output
