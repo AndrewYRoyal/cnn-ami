@@ -1,5 +1,5 @@
 input:
-  series: hourly.csv
+  series: use.csv
   classes: classes.csv
   splits: splits.csv
 output:
