@@ -9,11 +9,11 @@ import argparse
 import pandas as pd
 import subprocess
 
-# parser = argparse.ArgumentParser('Predict meter end-use using AMI data.')
-# parser.add_argument('--cfg', dest='cfg', default='cfg.yaml', action='store')
-# args = parser.parse_args()
-# cfg = yaml.load(open(args.cfg))
-cfg = yaml.load(open('cfg.yaml')) #<< use interactively
+parser = argparse.ArgumentParser('Predict meter end-use using AMI data.')
+parser.add_argument('--cfg', dest='cfg', default='cfg.yaml', action='store')
+args = parser.parse_args()
+cfg = yaml.load(open(args.cfg))
+# cfg = yaml.load(open('cfg.yaml')) #<< use interactively
 
 startTime = time()
 print('Loading Data...')
